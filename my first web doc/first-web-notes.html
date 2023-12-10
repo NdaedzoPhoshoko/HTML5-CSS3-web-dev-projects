@@ -25,7 +25,7 @@
             <li>Structural markup - martkup towards elements used to describe both headings and paragraphs.</li>
             </ol>
 
-    <h2>Semantic markup</h2>
+    <h2 id="heading-semantic-markup">Semantic markup</h2>
 
      <h3>bold tag</h3>
    <p>This word is <b>bold</b>.</p>
@@ -65,8 +65,10 @@
     <p>Lenovo Thinkpad:</p>
     <p>Was <s>R15000.00</s></p>
     <p>Now only R10000.00</p>
-     <hr />
+    <hr />
 
+    <h2>Structural markup</h2>
+    
     <h2>Lists</h2>
     <h3>Type of Lists</h3>
     <ul> <!--parent tag ul ensures that this list is not ordered-->
@@ -115,7 +117,42 @@
         </li>
         <li>Call John Doe</li>
     </ul>
-    <hr />
-    </body>
-</html>
 
+    <h2>Links (uses a-tag)</h2>
+    <p>Linking can be done to allow user to move to 
+        <strong>another website, another webpage on same website, or
+            another section of same webpage
+       </strong>. Different linking is applied below.
+    </p>
+
+    <p>Here are the links
+        <ul>
+            <li><a href="https://www.facebook.com">Facebook</a> (another website).</li> <!--absolute URL, specifies the domain name-->
+            <li><a href="scones-recipe-web.html">Scones Recipe</a> (another page on this website).</li> <!--relative URL, no need for domain name but the page name.html-->
+            <li><a href="#heading-semantic-markup">Semantic markup</a> (open same website but different section).</li>
+        </ul>
+    </p>
+
+    <h2>Images (img tag)</h2>
+    <h4>image followed by a paragraph</h4>
+
+    <img src="images/WhatsApp Image 2023-08-15 at 21.33.35.jpeg"
+        alt="A tutor student teaching Vector Spaces in class"
+        title="A university student tutoring Vector Spaces in class. Topic on the whiteboard is Basis of a 3rd-polynomial space"  
+        width="400" height="300"
+        />
+    <p>Most university students join tutorships becuase they prefer additional guidance. Though most students may not join, those that join are achieving very well.</p>
+
+    <h4>image spanned at the beggining of a paragraph</h4>
+
+    <p> <img src="images/WhatsApp Image 2023-08-25 at 19.22.26.jpeg"
+        alt="Woman eating food sitting on the grass"
+        title="Smilying woman eating food sitting on the grass"  
+        width="400" height="450"
+        />
+        Life is precious, whenever you are free of work take a break, find yourself a delicious meal.
+    </p>
+    
+    </body>
+
+</html>
