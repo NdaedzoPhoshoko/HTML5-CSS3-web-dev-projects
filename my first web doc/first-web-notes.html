@@ -127,7 +127,7 @@
 
     <p>Here are the links
         <ul>
-            <li><a href="https://www.facebook.com">Facebook</a> (another website).</li> <!--absolute URL, specifies the domain name-->
+            <li><a href="https://www.facebook.com" target="_blank">Facebook</a> (another website, traget="_blank" for newpage).</li> <!--absolute URL, specifies the domain name-->
             <li><a href="scones-recipe-web.html">Scones Recipe</a> (another page on this website).</li> <!--relative URL, no need for domain name but the page name.html-->
             <li><a href="#heading-semantic-markup">Semantic markup</a> (open same website but different section).</li>
         </ul>
@@ -141,18 +141,198 @@
         title="A university student tutoring Vector Spaces in class. Topic on the whiteboard is Basis of a 3rd-polynomial space"  
         width="400" height="300"
         />
-    <p>Most university students join tutorships becuase they prefer additional guidance. Though most students may not join, those that join are achieving very well.</p>
+    <p>Most university students join tutorships becuase they prefer additional guidance. Though most students may not join, those that join are achieving very well.
+        Most university students join tutorships becuase they prefer additional guidance. Though most students may not join, those that join are achieving very well.
+        Most university students join tutorships becuase they prefer additional guidance. Though most students may not join, those that join are achieving very well.
+    </p>
 
     <h4>image spanned at the beggining of a paragraph</h4>
 
     <p> <img src="images/WhatsApp Image 2023-08-25 at 19.22.26.jpeg"
         alt="Woman eating food sitting on the grass"
-        title="Smilying woman eating food sitting on the grass"  
+        title="Smiling woman eating food sitting on the grass"  
         width="400" height="450"
         />
-        Life is precious, whenever you are free of work take a break, find yourself a delicious meal.
+        Life is precious, whenever you are free at work take a break, find yourself a delicious meal.
+        Life is precious, whenever you are free at work take a break, find yourself a delicious meal.
+        Life is precious, whenever you are free at work take a break, find yourself a delicious meal.
+        Life is precious, whenever you are free at work take a break, find yourself a delicious meal.
+        Life is precious, whenever you are free at work take a break, find yourself a delicious meal.
     </p>
-    
+
+    <h4>Three rules for creating IMAGES</h4>
+    <ol type="a">
+        <li>Save images in the right format(either jpeg, gif or png)</li>
+        <li>Save images at the right size
+            <ul type="square">
+                <li>Same width and height</li>
+                <li>Must be smaller than the width and height</li>
+            </ul>
+        </li>
+        <li>Measure image height and width in pixels(not centimetres or inches)</li>
+    </ol>
+
+    <p>
+       <Strong>Advice: </Strong> <br />
+        Whenever an image has different colors, you must use image format JPEG. Use GIF or PNG when
+        saving an image with few colors or large areas of the same color (aka flat color).
+    </p>
+
+    <h2>figure and figcaption tags </h2>
+    <h4>They are used when we want to group the image(s) with the caption, figure has the ability to indent images as well.</h4>
+    <figure>
+        <p>
+            <img src="images/person_face.JPG" alt="image showing face of a man"
+            height="800" width="580">
+        </p>
+        <br />
+        <figcaption>
+            A <strong>full stack developer-to-be</strong> waiting to conduct an interview in the morning with the AAA19 company
+        </figcaption>
+    </figure>
+
+    <hr />
+
+    <h2>Building Tables</h2>
+    <p>A table is made up of grids( blocks). In order to build a table we need the to write out the table row by row
+        using<ul>
+            <li>table tag</li>
+            <li>th tag (table heading)</li>
+            <li>tr tag (table row)</li>
+            <li>td tag (table data)</li>
+        </ul>
+    </p>
+
+    <h3>Example of a basic table(borders are not showing as css is not yet applied)</h3>
+    <table>
+        <tr> <!--this shows that a row consists of mulpitple table-data (td)-->
+            <td>Chicken</td>
+            <td>Computer</td>
+            <td>Mouse</td>
+        </tr>
+        <tr>
+            <td>Human</td>
+            <td>Pencil</td>
+            <td>Microphone</td>
+        </tr>
+        <tr>
+            <td>Laptop</td>
+            <td>House</td>
+            <td>Pizza</td>
+        </tr>
+        <tr>
+            <td>Keyboard</td>
+            <td></td> <!--if a cell is empty, use the td element in order to render the table correctly-->
+            <td></td>
+        </tr>
+    </table>
+
+    <h3>Example of a table with a headings</h3>
+    <p>th tag is used when we give headings to rows and columns. It usually has the <b>scope</b> attribute is also used 
+    to indicate whether the heading is for a row or col. <strong>Do not mistaken th with thead</strong></p>
+    <table>
+        <thead></thead>
+        <tr> <!--a row to store headings-->
+            <th scope="col">Laptop Name</th> <!--heading for a first column-->
+            <th scope="col">Was</th> <!--for middle column-->
+            <th scope="col">Now</th> <!--for third column-->
+        </tr>
+        <tr>
+            <td>Lenovo i5</td>
+            <td>
+                <del>R15,000</del>
+            </td>
+            <td>R10,000</td>
+        </tr>
+        <tr>
+            <td>Lenovo i3</td>
+            <td>
+                <del>R9,800</del>
+            </td>
+            <td>R7,200</td>
+        </tr>
+    </table>
+
+    <p>You may give headings to rows, as shown below</p>
+    <table>
+        <tr>
+            <th></th> <!--table heading given to avoid problems of table rendering-->
+            <th scope="col">Saturday</th>
+            <th scope="col">Sunday</th>
+        </tr>
+        <tr>
+            <th scope="row">Tickets sold: </th>
+            <td>120</td>
+            <td>150</td>
+        </tr>
+        <tr>
+            <th scope="row">Total sales: </th>
+            <td>R1000</td>
+            <td>R2,300</td>
+        </tr>
+    </table>
+
+    <h3>Table with rows spanning the coloms(colspan attribute)</h3>
+    <table>
+        <tr>
+            <th></th>
+            <th scope="col">10AM</th>
+            <th scope="col">11AM</th>
+            <th scope="col">12PM</th>
+            <th scope="col">13PM</th>
+        </tr>
+        <tr>
+            <th scope="row">Monday</th>
+            <td colspan="2">Spider-Man</td> <!--cell occupies two colomns-->
+            <td>Viking S01-E04</td>
+            <td>Pink Panther Show</td>
+        </tr>
+        <tr>
+            <th scope="row">Tuesday</th>
+            <td>Regular Show</td>
+            <td>Viking S01-E05</td>
+            <td colspan="2">Invisible Man</td>
+        </tr>
+        <tr>
+            <th scope="row">Wednesday</th>
+            <td>Regular Show</td>
+            <td>Viking S01-E06</td>
+            <td>Tom and Jerry</td>
+            <td>The NASA show</td>
+        </tr>
+    </table>
+
+    <h3>Table with colomns spanning the rows(rowspan attribute)</h3>
+    <table>
+        <tr>
+            <th></th>
+            <th scope="col">10AM</th>
+            <th scope="col">11AM</th>
+            <th scope="col">12PM</th>
+            <th scope="col">13PM</th>
+        </tr>
+        <tr>
+            <th scope="row">Monday</th>
+            <td rowspan="2">Spider-Man</td> <!--cell occupies two rows-->
+            <td>Viking S01-E04</td>
+            <td>Pink Panther Show</td>
+            <td>Regular Show</td>
+        </tr>
+        <tr>
+            <th scope="row">Tuesday</th>
+            <td>Viking S01-E05</td>
+            <td>Invisible Man</td>
+            <td>Rythm City</td>
+        </tr>
+        <tr>
+            <th scope="row">Wednesday</th>
+            <td>The Witcher</td>
+            <td>Viking S01-E06</td>
+            <td>Tom and Jerry</td>
+            <td>The NASA show</td>
+        </tr>
+    </table>
+
     </body>
 
 </html>
