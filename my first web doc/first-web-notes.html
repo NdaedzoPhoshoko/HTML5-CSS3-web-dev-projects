@@ -183,7 +183,7 @@
     <figure>
         <p>
             <img src="images/person_face.JPG" alt="image showing face of a man"
-            height="800" width="580">
+            height="403.2" width="302">
         </p>
         <br />
         <figcaption>
@@ -205,7 +205,7 @@
 
     <h3>Example of a basic table(borders are not showing as css is not yet applied)</h3>
     <table>
-        <tr> <!--this shows that a row consists of mulpitple table-data (td)-->
+        <tr> <!--this shows that a row consists of multiple table-data (td)-->
             <td>Chicken</td>
             <td>Computer</td>
             <td>Mouse</td>
@@ -472,6 +472,119 @@
       </tfoot>
     </table>
 
+    <h2>Forms</h2>
+
+    <p>Forms are used when we want to collect information from users(visitors) on our website.
+        This includes examples such as an pplication form, sign up, shopping online etc. <br />
+        There are several types of form controls used to collect data to your site.
+        <ol type="1">
+            <li>Adding Text
+                <ul>
+                    <li>Text Input(single line)</li>
+                    <li>Password Input(single line but masks characters)</li>
+                    <li>Text Area(used for comments or paragraphs)</li>
+                </ul>
+            </li>
+            <li>Making choice
+                <ul>
+                    <li>Radio Buttons(circle options allowing user to select only one)</li>
+                    <li>CheckBoxes(squares allowing user to select multiple options)</li>
+                    <li>Drop-down boxes(list allowing user to choose one given option)</li>
+                </ul>
+            </li>
+            <li>Submitting Forms
+                <ul>
+                    <li>Submit Buttons</li>
+                    <li>Image Buttons(same as ubmit button, except that an image is used)</li>
+                </ul>
+            </li>
+            <li>Uploading Files
+                <ul>
+                    <li>File upload(images, pdt, etc)</li>
+                </ul>
+            </li>
+        </ol>
+    </p>
+
+    <h3>Example of a form(image taken from boostrap website)</h3>
+    <img src="images/example-form-bootstrap.jpeg" alt="Image demonstrating a form" height="660" width="553" />
+    <br />
+    <h3>Form Structure</h3>
+    <dl>    <!--definition list-->
+        <dt>form tag</dt>
+        <dd>Open tag for every form, must carry the <b>action</b>, <b>method</b> and <b>id</b> attributes. <br />
+            <b>Action</b> attribute points to URL of the page on the server that will receive the information when the form is submitted. <br />
+            <b>Method</b> attribute takes the <b>get</b> or <b>post</b> value. <br>
+            The get method takes value in the form and appends them at the end of the URL in the action attribute. It is 
+            ideal for short forms(search boxes) and retrieving ata from the web server(not adding or deleting data) <br>
+            The post method takes value in the form and sends them as HTTP headers, used when uploading a file, when having a long 
+            form, passwords(sensitive data), or adding or deleting information from a database <br>
+            <b>id</b> attribute is used to identify this form from other elements
+        </dd>
+    </dl> 
+
+    <h3>Text Input and Password Input</h3>
+    <p>Uses input tag with type, name, maxlength, <del>size</del> attributes</p>
+    <form action="https://www.tester.com/example0.php" method="post" id="collect-user-info-form">
+        <p>Username:
+            <input type="email" name="username" size="15" maxlength="30"/>
+        </p>
+        <p>Password:
+            <input type="password" name="password" size="15" maxlength="30" />
+        </p>
+    </form>
+
+    <h3>Text Area</h3>
+    <p>Uses textarea tag with name, cols(number of columns horizontally), and rows(number of lines vertically) attributes</p>
+    <form action="https://www.tester.com/example1.php" method="get" id="collect-user-feedback-form">
+        <p>What do you think about this website <br />
+            <textarea name="feedback" cols="40" rows="4">Enter feedback here...(we'll use javascript to remove this hint soon)</textarea>
+        </p>
+        </form>
+
+    <h3>Radio Button and CheckBox</h3>
+    <p>Uses input tag with type, name, value, and checked attributes. <strong>Note:</strong> If a Radio Button is used the type is set to 'radio'. 
+    And for a Check Box set type to 'check.  <b>The name attribute in all the radio buttons/checkboxes points to the same value.</b></p>
+    <form action="https://www.tester.com/example2.php" method="post" id="collect-user-feedback-form">
+        <p>Choose movie: 
+            <input type="radio" name="movie-name" value="Spider-Man" checked="checked"/>Spider-Man
+            <input type="radio" name="movie-name" value="The Invisible Man" />The Invisible Man
+            <input type="radio" name="movie-name" value="Pinoccio" />Pinoccio
+        </p>
+
+        <p>Please select your favorite movies: <br />
+            <input type="checkbox" name="favorite-movie" value="Black Panther" checked="checked"/>Black Panther <br />
+            <input type="checkbox" name="favorite-movie" value="Night at the Museum" />Night at the Museum <br />
+            <input type="checkbox" name="favorite-movie" value="Big Mouth" />Big Mouth
+        </p>
+    </form>
+
+    <h3>Drop-down list/Select box</h3>
+    <p>Uses name attribute that will be sent to the server with the selected value. <br />
+        It contains multiple <b>option</b> tag, the option tag has value attribute pointing to the value that will be sent to the server. <br />
+        For allowing visitors to select multiple option, use multiple attribute passing the mutliple value
+    </p>
+    <form action="https://www.tester.com/example3.php" method="post" id="collect-user-country-form">
+        <p>Which country are you located? (You can press and hold down control or command key while selecting multiple options.) <br />
+            <select name="country-list" multiple="multiple"> <!--used for drop-down list box-->
+                <option value="South Africa" selected="selected">South Africa</option>
+                <option value="China">China</option>
+                <option value="America">America</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Congo">China</option>
+                <option value="Nigeria">America</option>
+                <option value="Persia">Brazil</option>
+            </select>
+        </p>
+    </form>
+
+    <h3>File Input Box and Submit button</h3>
+    <p>Uses <b>input</b> tag with <b>type</b> set to 'file' and <b>name</b> of the option allowing users to attach the file as pdf, mp3, jpg, etc</p>
+    <form action="https://www.tester.com/example4.php" method="post" id="collect-user-file-form">
+        <p>Please attach your resume or CV below.</p>
+        <input type="file" name="user-resume" multiple="multiple"/> <!--add mutliple attribute to allow mutliple files--
+        <input type="submit" value="Upload" />
+    </form>
     </body>
 
 </html>
