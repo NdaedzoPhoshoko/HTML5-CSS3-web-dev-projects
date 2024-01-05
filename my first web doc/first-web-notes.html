@@ -582,9 +582,89 @@
     <p>Uses <b>input</b> tag with <b>type</b> set to 'file' and <b>name</b> of the option allowing users to attach the file as pdf, mp3, jpg, etc</p>
     <form action="https://www.tester.com/example4.php" method="post" id="collect-user-file-form">
         <p>Please attach your resume or CV below.</p>
-        <input type="file" name="user-resume" multiple="multiple"/> <!--add mutliple attribute to allow mutliple files-->
+        <input type="file" name="user-resume" multiple="multiple"/> <!--add the multiple attribute to allow multiple files-->
         <input type="submit" value="Upload" />
     </form>
+
+    <h3>Image Button</h3>
+    <p>Uses type attribute set to image(We added text input), src, alt, width and height attributes</p>
+    <form action="https://www.tester.com/example5.php" method="get" id="collect-user-subscription-email-form">
+        <p>Subscribe to our eamil list:
+            <input type="email" name="user-email" size="40" maxlength="30"/>
+            <input type="image" src="images/enter-button-no-background.png" alt="press enter to subscribe" width="60" height="60" align="center"/>
+        </p>
+    </form>
+
+    <h3>Button And Hidden Form Controls</h3>
+    <p>Place a <b>button</b> in a form, inside the button span texts. The use <b>input</b> tag with type set to hidden, including name and value attributes</p>
+    <form action="https://www.tester.com/example6.php" method="get" id="hidden-lyrics-form">
+        <button>
+            <img src="images/transparent-button.png" alt="Add" width="40" height="40" align="center"/>Add
+        </button>
+        <input type="hidden" name="bookmark" value="lyrics" size="40" maxlength="100"/> <!--THIS IS A HIDDEN CONTROL, may be used to trace the pages users were
+             when submitting the form-->
+    </form> <br />
+    <br />
+    
+    <h2>An Example Of A Registration Application Form</h2>
+    <p>Every visitor is required to pass through registration step as it is part of our conpany Ts&Cs. Fill up all necessary steps below.</p>
+    <h3>Register</h3>
+    <form action="https://www.tester.com/testing.php" method="post" id="registration-form">
+        <p>Enter Legal First Name:
+            <input type="text" name="firstname" size="15" maxlength="30" /> <br /> <br />
+            Enter Legal Family Name:
+            <input type="text" name="lastname" size="15" maxlength="30" /> <br /> <br />
+            Enter Email:
+            <input type="email" name="user-email"  size="15" maxlength="50" /> <br /> <br />
+            Enter Password:
+            <input type="password" name="user''password" size="15" maxlength="15" /> <b>length must be between 8 to 15 characters</b>
+        </p>
+        <p>Where did you hear about us:
+            <select name="partners" multiple="multiple" align="right">
+                <option value="our-website">Our Website</option>
+                <option value="Choose" selected="selected">Choose</option>
+                <option value="other">Other</option>
+                <option value="linkedin">Linkedin</option>
+                <option value="news">News</option>
+                <option value="social">Social Media</option>
+                <option value="inside">Inside Worker</option>
+                <option value="partners">Partners</option>
+            </select>
+        </p>
+        <p>
+            Choose Gender:
+            <select name="gender">
+                
+                <option value="male">Male</option>
+                <option value="Prefer To Not Say" selected="selected">Prefer To Not Say</option>
+                <option value="female">Female</option>
+            </select> 
+            </p>
+            <h3>Upload files below</h3>
+            <p>
+                Please attach Resume/CV: <b>file must be .pdf, .doc or .jpg format</b> <br /><br />
+                <input type="file" name="user-resume"/> 
+                <input type="submit" value="Upload" />
+                <br /> <br />
+            
+            What is your age group: <br /> 
+            <input type="radio" name="age-group" value="18-23" checked="checked"/>18-23
+            <input type="radio" name="age-group" value="24-27" />24-27
+            <input type="radio" name="age-group" value="28-33" />28-33
+            <input type="radio" name="age-group" value="34-above" />34 and Above
+            </p>
+            <h3>Our Terms and Conditions</h3>
+            
+            <p>This company does bluh bluh bluh bluh bluh. As part of this company we bluh bluh bluh bluh as being bluh bluh bluh bluh. By ticking the button below you agree to all our company's terms and conditions.</p>
+        
+        <input type="checkbox" name="agree-to-terms" value="I agree"/>I agree to all. <br />
+        <input type="checkbox" name="subscribe" value="subscribe"/> By checking this, you agree to subscribe on receiving our company's emails.
+        <br />
+    <input type="image" src="images/submitButton.png" alt="Submit" width="80" height="80" align="center"/>
+    </form>
+
+    <h3>Labelling Form Controls</h3>
+    <!--todo here-->
     </body>
 
 </html>
