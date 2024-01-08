@@ -2,7 +2,7 @@
     <head>
         <title>Descriptive Web Page | Tester</title>
     </head>
-    <body>
+    <body style="width: 50%;font-size: 15;font-family: sans-serif, Georgia, 'Times New Roman', Times, serif;">
         <h1>The Brief Documentation of HTML</h1>
         <p>This is my first webpage and I will be using it to document all my HTML&CSS notes. Projects will be made separate on their folders.</p>
         <h2>Content Focus</h2>
@@ -23,7 +23,7 @@
         <ol>
             <li>Semantic markup - markup that provides extra information(e.g quotation, achronyms etc).</li>
             <li>Structural markup - martkup towards elements used to describe both headings and paragraphs.</li>
-            </ol>
+        </ol>
 
     <h2 id="heading-semantic-markup">Semantic markup</h2>
 
@@ -35,7 +35,7 @@
         <p>This text has blockquote, it is used to show indented text, but CSS can still be used for this purpose.</p>
     </blockquote>
     <p>As N.C Phoshoko said, <q cite="https://tester.html/">This is a q-tag. This tag is used for quotations. </q>
-        </p>
+    </p>
          
          <h3>strong tag</h3>
     <p>This word has <strong>Strong</strong> importance</p>
@@ -148,7 +148,8 @@
 
     <h4>image spanned at the beggining of a paragraph</h4>
 
-    <p> <img src="images/WhatsApp Image 2023-08-25 at 19.22.26.png"
+    <p> 
+        <img src="images/WhatsApp Image 2023-08-25 at 19.22.26.png"
         alt="Woman eating food sitting on the grass"
         title="Smiling woman eating food sitting on the grass"  
         width="400" height="450"
@@ -538,7 +539,7 @@
     <p>Uses textarea tag with name, cols(number of columns horizontally), and rows(number of lines vertically) attributes</p>
     <form action="https://www.tester.com/example1.php" method="get" id="collect-user-feedback-form">
         <p>What do you think about this website <br />
-            <textarea name="feedback" cols="40" rows="4">Enter feedback here...(we'll use javascript to remove this hint soon)</textarea>
+            <textarea name="feedback" cols="40" rows="4">Enter feedback here...(we'll use placeholder attribute to remove this hint soon)</textarea>
         </p>
         </form>
 
@@ -660,11 +661,75 @@
         <input type="checkbox" name="agree-to-terms" value="I agree"/>I agree to all. <br />
         <input type="checkbox" name="subscribe" value="subscribe"/> By checking this, you agree to subscribe on receiving our company's emails.
         <br />
-    <input type="image" src="images/submitButton.png" alt="Submit" width="80" height="80" align="center"/>
+        <input type="image" src="images/submitButton.png" alt="Submit" width="80" height="80" align="center"/>
     </form>
 
-    <h3>Labelling Form Controls</h3>
-    <!--todo here-->
+    <h2>Labelling Form Controls</h2>
+    <h3>The label tag, fieldset tag, legend, id, and for attributes </h3>
+
+    <form action="https://www.yester.com/example7.php" method="post" id="user-credetials-example7">
+        <p>Label tag is used to describe or give the text to a form control. Allowing the form controls to have a larger touch space. <br/>
+            Fieldset is used to group related form controls.(useful using css), example:
+    
+            <fieldset style="width: 17%;background-color: rgba(195, 192, 192, 0.515);">
+                <legend>User Credentials</legend>
+                    <label>
+                        Enter username: <br />
+                        <input type="text" name="username" placeholder="enter username" size="40"/> <!--placeholder is a hint that appears on the text input-->
+                    </label> <br />
+                    <label>
+                        Enter password: <br />
+                        <input type="password" name="userpassword" placeholder="must be at least 8 characters" size="40"/>
+                    </label> <br />
+                </fieldset>
+    
+                <input type="checkbox" name="agree-to-company-terms" value="agree" id="iAgree"/>
+                <label for="iAgree">Agree to company terms and conditions</label> <!--the id and for attribute are used to allow user to check the box eeven when the user clicks the control's text-->
+                <br />
+                <input type="image" src="images/submitButton.png" alt="Submit" width="80" height="80" align="center"/>
+        </p>
+    </form>
+
+        <h2>Form Validation</h2>
+        <h3>Uses maxlength, minlength, required attributes</h3>
+    
+    <form action="https://www.yester.com/example7.php" method="post" id="user-credetials-example7">
+        <p>
+            Validation uses the required arribute to not allow users from submitting the from when it is incomplete, 
+            the below fields are required, although css must be used: example:
+    
+            <fieldset style="width: 17%;background-color: rgba(195, 192, 192, 0.515);">
+                <legend>Appointment Register</legend>
+                    <label>
+                        Enter username: <br />
+                        <input type="text" name="username" placeholder="enter username" size="40" maxlength="30" required/> <!--placeholder is a hint that appears on the text input-->
+                    </label> <br />
+                    <label>
+                        Enter password: <br />
+                        <input type="password" name="userpassword" placeholder="must be at least 8 characters" size="40" maxlength="30"
+                        minlength="8" required/> <!--the required attribute exist in HTML5 allowing users to not preceed with an empty field-->
+                    </label>  <br />
+                    <label>
+                        Enter email account: <input type="email" name="user-appoint-email" size="40" placeholder="enter email" required/> <!--browser will treat email as required by default-->
+                    </label> <br />
+                    <label>
+                        Choose appointment date: <input type="date" name="appointment-date" required/>
+                    </label> <br />
+                    <p>If you are needing information on-site, search here
+                        <input type="search" name="on-site-search" placeholder="type your search"/>
+                        <input type="image" src="images/enter-button-no-background.png" alt="press enter to subscribe" width="60" height="60" align="center"/>
+                        <br /><b style="font-size: 10;">Javascript not yet applied</b>
+                    </p>
+                </fieldset>
+    
+                <input type="checkbox" name="agree-to-company-terms" value="agree" id="iAgree" required/>
+                <label for="iAgree">Agree to company terms and conditions</label> <!--the id and for attribute are used to allow user to check the box eeven when the user clicks the control's text-->
+                <br />
+                <input type="image" src="images/submitButton.png" alt="Submit" width="80" height="80" align="center"/>
+        </p>
+    </form>
+    
+                  
     </body>
 
 </html>
