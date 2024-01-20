@@ -133,6 +133,8 @@
         </ul>
     </p>
 
+    <hr />
+
     <h2>Images (img tag)</h2>
     <h4>image followed by a paragraph</h4>
 
@@ -193,7 +195,6 @@
     </figure>
 
     <hr />
-
     <h2>Building Tables</h2>
     <p>A table is made up of grids( blocks). In order to build a table we need the to write out the table row by row
         using<ul>
@@ -473,6 +474,7 @@
       </tfoot>
     </table>
 
+    <hr />
     <h2>Forms</h2>
 
     <p>Forms are used when we want to collect information from users(visitors) on our website.
@@ -729,7 +731,107 @@
         </p>
     </form>
     
-                  
-    </body>
+    <hr />
+    <h2>Extra Markup</h2>
+    <h3>iframe tag</h3>
+    <p>Used to include a page inside another web page, it uses width, height, src, title, frameborder, scrolling attributes. <br />
+        You can choose to either embed a map, html, video, ads or etc. 
+    </p>
+    <code>
+        <iframe
+      width="100%"
+      height="400"
+      style="border:0"
+      loading="lazy"
+      title="Google Map"
+      allowfullscreen
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/?q=-23.328104107627603, 29.999749820951674&amp;output=embed"
+      >
+    </iframe>
+    </code>
+    <!--for online c++ compiler use src="https://www.jdoodle.com/embed/v0/2IhG?stdin=1&arg=0"
+            for online maps api use src="https://www.google.com/maps/embed/v1/place?key=&q=Space+Needle,Seattle+WA" -->
+    <h3>Meta tag</h3>
+    <p>Meta tag is an empty element used to describe information about a page, it is included on the head element</p>
+    <p>it has attributes such as:
+        <ul><li>name and content</li>
+            <li>http-equiv and content</li>
+            <li>charset</li>
+        </ul>
+        examples include:
+        <code><br />
+            name="description" content="put description here" <br />
+            name="keywords" content="keyword1, keyword2" used to help search engines identify webpage <br />
+            name="robots" content="noindex" used to not allow search engines to identify web page <br />
+            name="robots" content="nofollow" used to allow search engines to identify web page, not related links <br />
+            http-equiv="author" content="Ndaedzo Clement Phoshoko" <br />
+            http-equiv="pragma" content="no-cache" sed to not allow caching the web page<br />
+            http-equiv="expires" content="Sun, 31, Dec 2024 23:59:59 GMT" used to specify date and time for captured captured to ellapse<br />
+        </code>
+        <!--put box with code element here-->
+    </p>
+    
+    <h3>Grouping Elements</h3>
+    <h4>div tag</h4>
+    <p>Used to group elements that needs to share markup(used for block elements)</p>
+    <h5>example 1 below includes a section of code with a computer image</h5>
+    <div style="background-color: #0d0a0aa6;color: whitesmoke;width: 400px;height: 150;">
+        <code>
+            <img src="images/Lenovo_IdeaCentre_510.png" align="left" alt="Lenovo Ideapad Desktop Computer with Mouse and Keyboard"
+            width="200" />
+            <p><br /><br />Properties:<br />
+                Was: <del>R20000.00</del><br />
+                Now: <ins>R11990,00</ins><br />
+                <b>Hurry while sale last!</b><br />
+            </p>
+        </code>
+    </div>
 
+    <h4>span tag</h4>
+    <p>Just like div, except that it is used to group inline elements.</p>
+    <h5>example 2 below includes a bold pragraph with some words that are styled uniquely from sourrounding texts</h5>
+    <p style="text-transform: uppercase;">
+        <b>I used to be a hip hop and rap artist back in high school. At varsity, here I met the <span style="color: blue;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">digital world</span>, binary made me detach 
+            to the world of binary. Now I have goals of becoming a full stack developer with magnet businesses.
+        </b>
+    </p>
+
+    <!-- <button style="
+        margin-bottom: 5px;
+        height: 65px;
+        width: 19%;
+        border: 1px solid #e3e3e3;
+        background-color: #E7E9EB;
+        color: #555;
+        font-size: 16px;
+        padding: 20px 0;
+        text-align: center;
+        vertical-align: middle;
+        display: inline-block;
+        text-decoration: none !important;
+        border-radius: 5px;">Html5</button>
+    -->
+    <h2>Flash</h2>
+    <p>Used to play animation on websites( video and audio is allowed in flash)</p>
+    <p>There are Three steps needed to used flash
+        <ol type="1">
+            <li>Convert video into FLV format</li>
+            <li>Find FLV player to play the video</li>
+            <li>Include player and video in the webpage</li>
+        </ol></p>
+    <p>See an <a href="../flash/index.html">Example using Flash</a>
+    </p>
+
+    <!--oogle code used to make an SVG voice button-->
+    <!--<svg class="goxjub" focusable="true" width="100" height="100"
+        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#4285f4" d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z"></path>
+        <path fill="#34a853" d="m11 18.08h2v3.92h-2z"></path>
+        <path fill="#fbbc04" d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z"></path>
+        <path fill="#ea4335" d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z"></path>
+        </svg>
+    -->
+    
+    </body>
 </html>
